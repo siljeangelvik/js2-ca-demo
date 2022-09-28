@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="./build/style.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/calendar.css">
-    <script defer src="./js/calendar.js"></script>
-    <script defer src="./js/utils/displayDate.js"></script>
 </head>
-
 <body>
 
 <!-- MENU -->
@@ -36,8 +33,6 @@
     </div>
 </div>
 
-
-
 <!-- DATE, HEADING AND BUTTON -->
 <div class="container p-3 mb-3 d-flex justify-content-between">
     <div>
@@ -57,10 +52,8 @@
     </div>
 </div>
 
-
 <!-- CALENDAR WIDGET -->
 <div class="calendar"></div>
-
 
 <!-- FEED: YOUR SCHEDULE -->
 <div class="container p-4 mb-3">
@@ -108,12 +101,6 @@
 </div>
 
 
-
-
-
-
-
-
 <!-- SELECT DROPDOWN -->
 <section>
     <div class="container">
@@ -130,17 +117,18 @@
             <option value="wario" class="dropdown-item">Wario</option>
         </select>
     </div>
-
+<!-- RESULT CARDS Container -->
     <div id="container" class="d-flex flex-wrap justify-content-evenly justify-items-start">
         Please select a character..
     </div>
 </section>
 
 
-
-
-<script src="./js/utils/select.js" type="module"></script>
 <script src="js/utils/nav.mjs" type="module"></script>
+<script src="./js/utils/select.js" type="module"></script>
+<script src="js/utils/tabs.mjs" type="module"></script>
+<script defer src="js/utils/displayDate.mjs"></script>
+<script defer src="js/utils/calendar.mjs"></script>
 
 </body>
 </html>

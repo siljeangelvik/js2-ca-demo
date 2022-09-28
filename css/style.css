@@ -1,5 +1,17 @@
+
+body {
+    height: 100%;
+}
+/* MAKING CARD IMAGES EQUAL SIZE */
 .card-img-top {
     width: 100%;
     height: 25rem;
     object-fit: cover;
+}
+
+/* OVERFLOW: CANNOT SCROLL DOWN */
+body,
+.modal,
+div.container {
+    overflow-y:auto;
 }

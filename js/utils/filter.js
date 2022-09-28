@@ -27,7 +27,7 @@ collectCards();
 const inputField = document.getElementById("queryString");
 inputField.addEventListener("keyup", filterCards);
 
-function filterCards () {
+export function filterCards () {
     const filterQuery = inputField.value;
     //console.log(filterQuery);
     console.log (collection.length);
@@ -36,7 +36,7 @@ function filterCards () {
         //console.log(card.name, filterQuery);
         //console.log(card.name.toUpperCase().indexOf(filterQuery.toUpperCase()) > -1)
         return card.name.toUpperCase().indexOf(filterQuery.toUpperCase()) > -1;
-    })
+    });
 
     listData (filtered, outElement);
 }

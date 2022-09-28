@@ -6,7 +6,7 @@
 const navElement = document.querySelector("nav#menu");
 makeMenu(navElement);
 
-function makeMenu(nav) {
+export function makeMenu(nav) {
     const links = `
            <div class="p-2 text-center">
            <a href="./feed.html" class="text-decoration-none text-white w-100 fw-lighter">

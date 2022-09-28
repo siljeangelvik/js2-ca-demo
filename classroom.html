@@ -10,10 +10,7 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./build/style.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./js/utils/displayDate.js"></script>
-    <script defer src="./js/tabs.js"></script>
 </head>
-
 <body>
 
 <!-- MENU -->
@@ -43,12 +40,11 @@
 
 <!-- CLASSROOM: VIDEO -->
 <div class="container px-3">
-        <div class="embed-responsive ratio ratio-16x9">
-            <iframe class="border rounded-4" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                    allowfullscreen></iframe>
-        </div>
+    <div class="embed-responsive ratio ratio-16x9">
+        <iframe class="border rounded-4" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                allowfullscreen></iframe>
+    </div>
 </div>
-
 
 <!-- CLASSROOM: INFORMATION -->
 <div class="container p-3 d-flex justify-content-between justify-items-center">
@@ -77,61 +73,67 @@
 
 <!-- CLASSROOM: TABS -->
 <div class="container px-3">
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                role="tab" aria-controls="home" aria-selected="true">Description
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                role="tab" aria-controls="profile" aria-selected="false">Lessons
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
-                role="tab" aria-controls="messages" aria-selected="false">Deliveries
-        </button>
-    </li>
-</ul>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">Description
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">Lessons
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
+                    role="tab" aria-controls="messages" aria-selected="false">Deliveries
+            </button>
+        </li>
+    </ul>
 
-<!-- Tab panes -->
-<div class="tab-content pt-3">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="description-tab">
-        <h5>About this course</h5>
-        <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">JavaScript functions are first-class; a function is considered to be an object. As such, a function may
-            have properties and methods, such as <code>.call()</code> and <code>.bind()</code>. </p>
-        <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">A nested function is a function defined within
-            another function. It is created each time the outer function is invoked. JavaScript also supports anonymous <code>functions</code>. </p>
+    <!-- Tab panes -->
+    <div class="tab-content pt-3">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="description-tab">
+            <h5>About this course</h5>
+            <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">JavaScript functions are first-class; a
+                function is considered to be an object. As such, a function may
+                have properties and methods, such as <code>.call()</code> and <code>.bind()</code>. </p>
+            <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">A nested function is a function defined
+                within
+                another function. It is created each time the outer function is invoked. JavaScript also supports
+                anonymous <code>functions</code>. </p>
 
-        <h5 class="pt-3">Teachers</h5>
-        <div class="d-flex flex-column gap-2">
-            <div class="d-flex gap-2">
-                <img src="https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg" class="img-circle rounded-5"
-                     alt="john doe" width="25px" height="25px">
-                <span>John Doe</span>
-            </div>
-            <div class="d-flex gap-2">
-                <img src="https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_1280.jpg" class="img-circle rounded-5"
-                     alt="jane dosette" width="25px" height="25px">
-                <span>Jane Doesette</span>
-            </div>
-            <div class="d-flex gap-2">
-                <img src="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_1280.jpg" class="img-circle rounded-5"
-                     alt="jordan doser" width="25px" height="25px">
-                <span>Jordan Doser</span>
+            <h5 class="pt-3">Teachers</h5>
+            <div class="d-flex flex-column gap-2">
+                <div class="d-flex gap-2">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg"
+                         class="img-circle rounded-5"
+                         alt="john doe" width="25px" height="25px">
+                    <span>John Doe</span>
+                </div>
+                <div class="d-flex gap-2">
+                    <img src="https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_1280.jpg"
+                         class="img-circle rounded-5"
+                         alt="jane dosette" width="25px" height="25px">
+                    <span>Jane Doesette</span>
+                </div>
+                <div class="d-flex gap-2">
+                    <img src="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_1280.jpg"
+                         class="img-circle rounded-5"
+                         alt="jordan doser" width="25px" height="25px">
+                    <span>Jordan Doser</span>
+                </div>
             </div>
         </div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="lessons-tab">...</div>
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="deliveries-tab">...</div>
     </div>
-    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="lessons-tab">...</div>
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="deliveries-tab">...</div>
-</div>
 </div>
 
-
-<script src="./js/utils/select.js" type="module"></script>
 <script src="js/utils/nav.mjs" type="module"></script>
+<script src="js/utils/displayDate.mjs" type="module"></script>
+<script src="js/utils/tabs.mjs" type="module"></script>
 
 </body>
 </html>
