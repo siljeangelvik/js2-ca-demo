@@ -16,16 +16,17 @@
 <!-- MENU -->
 <nav id="menu" class="navbar navbar-expand navbar-expand-lg position-fixed start-0 bottom-0 end-0 bg-dark d-flex no-wrap justify-content-between"></nav>
 
-<!-- CLASSROOM: DATE, HEADING AND BUTTON -->
+<!-- HEADING -->
 <div class="container p-3 d-flex justify-content-between align-items-center">
     <div>
         <p class="text-muted">Today,
             <span id="current_day">5</span>
             <span id="current_month">May</span>
-            <span id="current_year">2014</span></p>
+            <span id="current_year">2014</span>
+        </p>
         <h2>Classroom</h2>
+        <span class="text-muted fw-light">Fron-End Development 2</span>
     </div>
-
     <div>
         <button class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
@@ -37,7 +38,7 @@
     </div>
 </div>
 
-<!-- CLASSROOM: VIDEO -->
+<!-- VIDEO -->
 <div class="container px-3">
     <div class="embed-responsive ratio ratio-16x9">
         <iframe class="border rounded-4" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
@@ -45,7 +46,7 @@
     </div>
 </div>
 
-<!-- CLASSROOM: INFORMATION -->
+<!-- INFORMATION -->
 <div class="container p-3 d-flex justify-content-between justify-items-center">
     <div>
         <h3>JavaScript 2</h3>
@@ -55,12 +56,12 @@
     <div class="d-flex flex-column gap-2 align-items-start">
         <div class="d-flex gap-2">
             <img src="https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg" class="img-circle rounded-5"
-                 alt="john doe" width="25px" height="25px">
+                 alt="john doe" width="23px" height="23px">
             <span>John Doe</span>
         </div>
 
         <div class="d-flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people"
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-people"
                  viewBox="0 0 16 16">
                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
             </svg>
@@ -70,30 +71,18 @@
 </div>
 
 
-<!-- CLASSROOM: TABS -->
-<div class="container px-3">
+<!-- TABS -->
+<div class="tab-container-one container px-3">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true">Description
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                    role="tab" aria-controls="profile" aria-selected="false">Lessons
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
-                    role="tab" aria-controls="messages" aria-selected="false">Deliveries
-            </button>
-        </li>
+        <li class="nav-item active"><a class="nav-link active" href="#description" role="tab" aria-controls="description" data-bs-toggle="tab">Description</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lessons" role="tab" aria-controls="lessons" data-bs-toggle="tab">Lessons</a></li>
+        <li class="nav-item"><a class="nav-link" href="#deliveries" role="tab" aria-controls="deliveries" data-bs-toggle="tab">Deliveries</a></li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content pt-3">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="description-tab">
+        <div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="description-tab">
             <h5>About this course</h5>
             <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">JavaScript functions are first-class; a
                 function is considered to be an object. As such, a function may
@@ -102,7 +91,6 @@
                 within
                 another function. It is created each time the outer function is invoked. JavaScript also supports
                 anonymous <code>functions</code>. </p>
-
             <h5 class="pt-3">Teachers</h5>
             <div class="d-flex flex-column gap-2">
                 <div class="d-flex gap-2">
@@ -125,8 +113,12 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="lessons-tab">...</div>
-        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="deliveries-tab">...</div>
+        <div class="tab-pane" id="lessons" role="tabpanel" aria-labelledby="lessons-tab">
+            <h5>Lesson Tasks</h5>
+        </div>
+        <div class="tab-pane" id="deliveries" role="tabpanel" aria-labelledby="deliveries-tab">
+            <h5>Deliveries</h5>
+        </div>
     </div>
 </div>
 

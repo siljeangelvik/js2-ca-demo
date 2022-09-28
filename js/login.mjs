@@ -34,5 +34,5 @@ const userToLogin = {
     "password": "noroff-student-321",
 };
 
-loginUser(loginUrl, userToLogin);
+// loginUser(loginUrl, userToLogin);
 

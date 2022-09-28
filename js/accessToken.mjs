@@ -28,4 +28,4 @@ export async function getWithToken(url, method = 'GET') {
     }
 }
 
-getWithToken(postsUrl);
+//getWithToken(postsUrl);

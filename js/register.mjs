@@ -43,4 +43,4 @@ const userToRegister = {
     // "banner": "https://img.service.com/banner.jpg"
 };
 
-registerUser(registerUrl, userToRegister);
+// registerUser(registerUrl, userToRegister);
