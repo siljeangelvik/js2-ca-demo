@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CLASSROOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./build/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/utils/displayDate.js"></script>
+    <script defer src="./js/tabs.js"></script>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav id="menu"
+     class="navbar sticky-bottom navbar-expand-lg navbar-dark bg-dark d-flex py-2 justify-content-evenly position-fixed start-0 bottom-0 end-0"></nav>
+
+<!-- CLASSROOM: DATE, HEADING AND BUTTON -->
+<div class="container p-3 d-flex justify-content-between align-items-center">
+    <div>
+        <p class="text-muted">Today,
+            <span id="current_day">5</span>
+            <span id="current_month">May</span>
+            <span id="current_year">2014</span></p>
+        <h2>Classroom</h2>
+    </div>
+
+    <div>
+        <button class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+                 viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+            Add Class
+        </button>
+    </div>
+</div>
+
+<!-- CLASSROOM: VIDEO -->
+<div class="container px-3">
+        <div class="embed-responsive ratio ratio-16x9">
+            <iframe class="border rounded-4" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                    allowfullscreen></iframe>
+        </div>
+</div>
+
+
+<!-- CLASSROOM: INFORMATION -->
+<div class="container p-3 d-flex justify-content-between justify-items-center">
+    <div>
+        <h3>JavaScript 2</h3>
+        <p class="text-muted fw-light">Module: 4.3</p>
+    </div>
+
+    <div class="d-flex flex-column gap-2 align-items-start">
+        <div class="d-flex gap-2">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg" class="img-circle rounded-5"
+                 alt="john doe" width="25px" height="25px">
+            <span>John Doe</span>
+        </div>
+
+        <div class="d-flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people"
+                 viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+            </svg>
+            <span>16 Enrolled</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- CLASSROOM: TABS -->
+<div class="container px-3">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                role="tab" aria-controls="home" aria-selected="true">Description
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">Lessons
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
+                role="tab" aria-controls="messages" aria-selected="false">Deliveries
+        </button>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content pt-3">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="description-tab">
+        <h5>About this course</h5>
+        <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">JavaScript functions are first-class; a function is considered to be an object. As such, a function may
+            have properties and methods, such as <code>.call()</code> and <code>.bind()</code>. </p>
+        <p class="text-muted" style="max-width: 75ch; line-height: 1.5em;">A nested function is a function defined within
+            another function. It is created each time the outer function is invoked. JavaScript also supports anonymous <code>functions</code>. </p>
+
+        <h5 class="pt-3">Teachers</h5>
+        <div class="d-flex flex-column gap-2">
+            <div class="d-flex gap-2">
+                <img src="https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg" class="img-circle rounded-5"
+                     alt="john doe" width="25px" height="25px">
+                <span>John Doe</span>
+            </div>
+            <div class="d-flex gap-2">
+                <img src="https://cdn.pixabay.com/photo/2016/06/06/17/05/woman-1439909_1280.jpg" class="img-circle rounded-5"
+                     alt="jane dosette" width="25px" height="25px">
+                <span>Jane Doesette</span>
+            </div>
+            <div class="d-flex gap-2">
+                <img src="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_1280.jpg" class="img-circle rounded-5"
+                     alt="jordan doser" width="25px" height="25px">
+                <span>Jordan Doser</span>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="lessons-tab">...</div>
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="deliveries-tab">...</div>
+</div>
+</div>
+
+
+<script src="./js/utils/select.js" type="module"></script>
+<script src="js/utils/nav.mjs" type="module"></script>
+
+</body>
+</html>
