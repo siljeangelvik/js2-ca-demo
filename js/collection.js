@@ -1,5 +1,5 @@
 // -------------- MENU, CALENDAR, LIST DATA
-import  { makeMenu } from "./utils/nav.mjs";
+import  { makeMenu } from "./utilities/nav.mjs";
 import  { CalendarControl } from "./utils/calendar.mjs";
 import  { listData } from "./utils/utils.mjs";
 

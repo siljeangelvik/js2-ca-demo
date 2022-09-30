@@ -33,7 +33,7 @@ export const validateInputs = () => {
         console.log('FAILED! Name required');
     }
     if (!isValidEmail(email)) {
-        returnMessage[1].inninnerTexterHTML = 'Email is not correct';
+        returnMessage[1].innerText = 'Email is not correct';
         console.log('FAILED! Email required '); // return this message
     }
     if (!isValidPassword(password)) {
