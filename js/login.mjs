@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "./register.mjs";
+import { validateInputs } from "./utilities/validation.mjs";
 
 const loginUrl = `${API_BASE_URL}/api/v1/social/auth/login`;
 

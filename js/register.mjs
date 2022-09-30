@@ -1,4 +1,5 @@
 export const API_BASE_URL = 'https://nf-api.onrender.com';
+import { validateInputs } from "./utilities/validation.mjs";
 
 const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
 
@@ -16,8 +17,9 @@ const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
  * registerUser(registerUrl, userToRegister);
  * ```
  */
+
 export async function registerUser(url, userData) {
-    // console.log(url, userData);
+     console.log(url, userData);
     try {
         const postData = {
             method: 'POST',
@@ -36,11 +38,12 @@ export async function registerUser(url, userData) {
 }
 
 const userToRegister = {
-    "name": "bgo_student_test",
-    "email": "bgo_student_test@stud.noroff.no",
-    "password": "noroff-student-321",
+    "name": "test_example",
+    "email": "test_example@noroff.no",
+    "password": "text_example123",
     // "avatar": "https://img.service.com/avatar.jpg",
     // "banner": "https://img.service.com/banner.jpg"
 };
+
 
 // registerUser(registerUrl, userToRegister);

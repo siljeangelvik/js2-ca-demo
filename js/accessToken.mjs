@@ -1,4 +1,7 @@
 import { API_BASE_URL } from "./register.mjs";
+import { inputFields } from "./utilities/validation.mjs";
+import { returnMessage } from "./utilities/validation.mjs";
+
 const postsUrl = `${API_BASE_URL}/api/v1/social/posts`;
 
 // End-points:
@@ -28,4 +31,4 @@ export async function getWithToken(url, method = 'GET') {
     }
 }
 
-//getWithToken(postsUrl);
+// getWithToken(postsUrl);

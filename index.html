@@ -24,7 +24,7 @@
                 <div class="card bg-dark text-white" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
 
-                        <form id="userLogin"
+                        <form id="formLogin"
                               action="views/feed.html"
                               method="GET"
                               enctype="application/x-www-form-urlencoded"
@@ -34,9 +34,9 @@
                             <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
                             <div class="form-outline form-white mb-4">
-                                <label for="userEmail" class="form-label">Email</label>
-                                <input id="userEmail"
-                                       name="userEmail"
+                                <label for="loginEmail" class="form-label">Email</label>
+                                <input id="loginEmail"
+                                       name="loginEmail"
                                        type="email"
                                        value=""
                                        placeholder="Type your email" required
@@ -44,9 +44,9 @@
                             </div>
 
                             <div class="form-outline form-white mb-4">
-                                <label for="userPassword" class="form-label">Password</label>
-                                <input id="userPassword"
-                                       name="userPassword"
+                                <label for="loginPassword" class="form-label">Password</label>
+                                <input id="loginPassword"
+                                       name="loginPassword"
                                        type="password"
                                        value="Password"
                                        placeholder="Password" required
@@ -56,8 +56,10 @@
                             <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#">Forgot password?</a></p>
 
                             <button type="submit"
+                                    id="submitBtn"
+                                    name="submitBtn"
                                     formmethod="POST"
-                                    class="btn btn-outline-light btn-lg px-5">Login
+                                    class="btn btn-outline-light btn-lg px-5">Log in
                             </button>
 
                             <div class="d-flex justify-content-center text-center mt-4 pt-1">
@@ -67,8 +69,7 @@
                             </div>
                         </form>
                         <div>
-                            <p class="mb-0">Don't have an account? <a href="./register.html"
-                                                                      class="text-white-50 fw-bold">Sign Up</a></p>
+                            <p class="mb-0">Don't have an account? <a href="./register.html" class="text-white-50 fw-bold">Sign Up</a></p>
                         </div>
                     </div>
                 </div>
