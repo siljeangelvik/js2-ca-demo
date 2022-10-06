@@ -1,3 +1,18 @@
+
+// ---- REGISTER
+// Collect data from form
+// Validate (notice special rules for username  and email)
+// IF NOT valid: Notify user
+// ELSE:
+//    POST data to API
+//    Check response
+//    IF status OK:
+//       Register has been made, notify user (with link to login)
+//    IF status FAIL and message is "Profile already exists":
+//       Notify user (also with link to login)
+//    ELSE (also status FAIL):
+//       Notify user and log reason
+
 let inputFields = document.querySelectorAll('form > * input');// console.log(inputFields);
 let returnMessage = document.querySelectorAll('span');
 let eventButton = document.querySelector('form > button');

@@ -5,87 +5,173 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login to your account</title>
+    <title>TESTING</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../build/style.css">
 </head>
-<body>
+<body class="bg-dark">
 
-<div class="container">
-    <form action="" id="validateForm" class="d-flex flex-column gap-2 text-center mt-5 w-50">
-        <label for="userName">Name</label>
-        <input id="userName" type="text" name="userName" class="inputRegister">
-        <span></span>
+<div>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white gradient-custom" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
 
-        <label for="userEmail">Email</label>
-        <input id="userEmail" type="email" name="userEmail" class="inputRegister">
-        <span></span>
+                        <form action="" id="validateForm" class="mb-md-5 mt-md-4 pb-5">
 
-        <label for="userPassword">Password</label>
-        <input id="userPassword" type="password" name="userPassword" class="inputRegister">
-        <span></span>
+                            <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
+                            <p class="text-white-50 mb-5">Sign up to register a new account!</p>
 
-        <button id="eventButton" type="button">Validate</button>
-    </form>
+
+                            <div class="inputRegister form-outline form-white mb-4">
+                                <label for="userName" class="form-label">Name</label>
+                                <input id="userName" type="text" name="userName" class="form-control form-control-lg"
+                                       required>
+                                <span></span>
+                            </div>
+
+                            <div class="inputRegister form-outline form-white mb-4">
+                                <label for="userEmail" class="form-label">Email</label>
+                                <input id="userEmail" type="email" name="userEmail" class="form-control form-control-lg"
+                                       required>
+                                <span></span>
+                            </div>
+
+                            <div class="inputRegister form-outline form-white mb-4">
+                                <label for="userPassword" class="form-label">Password</label>
+                                <input id="userPassword" type="password" name="userPassword"
+                                       class="form-control form-control-lg" required>
+                                <span></span>
+                            </div>
+                            <p class="small mb-5 pb-lg-2"><a class="text-white" href="#">Read terms and
+                                conditions</a></p>
+
+
+                            <button id="eventButton" type="button" class="btn btn-outline-light btn-lg px-5">SIGN UP
+                            </button>
+
+                            <p class="pt-3">Already registered? <a href="../index.html" class="text-white fw-bold">Login</a></p>
+
+                            <span></span>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
-    /*
-    const API_URL = 'https://nf-api.onrender.com/api/v1';
+    export { userToRegister };
+    console.log("REGISTER.HTML + VALIDATE-REGISTER.JS");
+    //// ------- VALIDATE REGISTER FORM
 
-    const myEmails = { userEmail1: "@noroff.no", userEmail2: "@stud.noroff.no"};
-    console.info(myEmails);
-*/
+    // Collect data from form
+    // Validate (notice special rules for username  and email)
+    // IF NOT valid: Notify user
+    // ELSE:
+    //    POST data to API
+    //    Check response
+    //    IF status OK:
+    //       Register has been made, notify user (with link to login)
+    //    IF status FAIL and message is "Profile already exists":
+    //       Notify user (also with link to login)
+    //    ELSE (also status FAIL):
+    //       Notify user and log reason
 
-    let inputFields = document.querySelectorAll('.inputRegister');// console.log(inputFields);
-    let returnMessage = document.querySelectorAll('span');
-    let eventButton = document.querySelector('form > button');
+    const inputUserName = document.getElementById('userName');
+    //console.log(inputUserName);
+    const inputUserEmail = document.getElementById('userEmail');
+    //console.log(inputUserEmail);
+    const inputUserPassword = document.getElementById('userPassword');
+    //console.log(inputUserPassword);
+    let returnMessage = document.querySelectorAll('form > * span');
+    //console.log(returnMessage);
+    let eventButton = document.querySelector('#eventButton');
+    //console.log(eventButton);
 
+    // Collect data from form
+    console.log('COLLECT DATA FROM FORM: ');
+    let userToRegister = {
+        "username": inputUserName.value.trim(),
+        "email": inputUserEmail.value.trim(),
+        "password": inputUserPassword.value.trim(),
+    };
+    console.log(userToRegister);
+
+    //// Validate (notice special rules for username  and email)
+    const isValidUserName = userName => {
+        let userNameRegex = /^[a-z0-9_æøå]{2,25}$/i;
+        return userNameRegex.test(String(userName));
+    };
+
+    const isValidEmail = userEmail => {
+        const emailRegex = /^[a-z0-9_æøå]{4,25}@(stud.)?noroff\.no$/i;
+        return emailRegex.test(String(userEmail));
+    };
+
+    const isValidPassword = userPassword => {
+        let passwordRegex = /^[a-z0-9_æøå]{8,25}$/i;
+        return passwordRegex.test(String(userPassword));
+    };
+
+    //// Validate (notice special rules for username  and email)
     eventButton.addEventListener('click', event => {
         event.preventDefault();
         // console.log("button clicked");
         validateInputs();
     });
 
-    const isValidUserName = userName => {
-        let userNameRegex = /^[a-z-A-Z-0-9_æøåÆØÅ]{2,25}$/i;
-        return userNameRegex.test(String(userName));
-    };
-
-    const isValidEmail = email => {
-        const emailRegex = /^[a-z0-9](\.?[a-z0-9]){4,}@(stud.)?noroff\.no$/i;
-        return emailRegex.test(String(email));
-    };
-
-    const isValidPassword = password => {
-        let passwordRegex = /^[a-z-A-Z-0-9æøåÆØÅ]{8,30}$/i; //
-        return passwordRegex.test(String(password));
-    };
-
     const validateInputs = () => {
-        let userName = inputFields[0].value.trim();
-        let email = inputFields[1].value.trim();
-        let password = inputFields[2].value.trim();
 
-        if (!isValidUserName(userName)) {
-            returnMessage[0].innerText = 'Name is required';
-            console.log('FAILED! Name required');
-        }
-        if (!isValidEmail(email)) {
-            returnMessage[1].inninnerTexterHTML = 'Email is not correct';
-            console.log('FAILED! Email required '); // return this message
-        }
-        if (!isValidPassword(password)) {
-            returnMessage[2].innerText = 'Password need at least 8 characters';
-            console.log('FAILED! Password required ');
-        }
 
-        /* This is just to console if all input-fields are valid */
-        if (isValidUserName(userName) && isValidEmail(email) && isValidPassword(password)) {
+       /*
+       const validUserName = inputUserName.value.trim();
+        const validEmail = inputUserEmail.value.trim();
+        const validPassword = inputUserPassword.value.trim();
+*/
+        let userToRegister = {
+            "username": validUserName.value.trim(),
+            "email": validEmail.value.trim(),
+            "password": validPassword.value.trim(),
+        };
+///// IF NOT valid: Notify user
+        if (!isValidUserName(validUserName)) {
+            // console.log('FAILED! Name required');
+            returnMessage[0].innerText = '* Can only use underscore (_) as separator';
+            returnMessage[0].style.color = 'red';
+        }
+///// IF NOT valid: Notify user
+        if (!isValidEmail(validEmail)) {
+            // console.log('FAILED! Email required');
+            returnMessage[1].innerText = '* Valid email is required';
+            returnMessage[1].style.color = 'red';
+        }
+///// IF NOT valid: Notify user
+        if (!isValidPassword(validPassword)) {
+            // console.log('FAILED! Password required');
+            returnMessage[2].innerText = '* More than 8 characters is required';
+            returnMessage[2].style.color = 'red';
+        }
+///// ELSE:
+        if (isValidUserName(validUserName) && isValidEmail(validEmail) && isValidPassword(validPassword)) {
             console.log('SUCCESS! All input fields are validated');
+            console.log(userToRegister);
         }
     };
+
+    //    POST data to API
+    //    Check response
+    //    IF status OK:
+    //       Register has been made, notify user (with link to login)
+    //    IF status FAIL and message is "Profile already exists":
+    //       Notify user (also with link to login)
+    //    ELSE (also status FAIL):
+    //       Notify user and log reason
+
 
 </script>
 </body>

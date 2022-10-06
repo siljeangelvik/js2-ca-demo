@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "./register.mjs";
-import { inputFields } from "./utilities/validation.mjs";
-import { returnMessage } from "./utilities/validation.mjs";
+import { inputFields } from "./utilities/validateRegister.mjs";
+import { returnMessage } from "./utilities/validateRegister.mjs";
 
 const postsUrl = `${API_BASE_URL}/api/v1/social/posts`;
 

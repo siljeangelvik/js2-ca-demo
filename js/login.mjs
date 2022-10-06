@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "./register.mjs";
-import { validateInputs } from "./utilities/validation.mjs";
+import { validateInputs } from "./utilities/validateRegister.mjs";
+import { userData as userToLogin } from "./utilities/validate-register.mjs";
 
 const loginUrl = `${API_BASE_URL}/api/v1/social/auth/login`;
 
@@ -30,10 +31,13 @@ export async function loginUser(url, userData) {
     }
 }
 
+/*
 const userToLogin = {
     "email": "bgo_student_test@stud.noroff.no",
     "password": "noroff-student-321",
 };
+*/
 
-// loginUser(loginUrl, userToLogin);
+
+ loginUser(loginUrl, userToLogin);
 

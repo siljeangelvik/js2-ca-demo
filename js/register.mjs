@@ -1,14 +1,14 @@
 export const API_BASE_URL = 'https://nf-api.onrender.com';
-import { validateInputs } from "./utilities/validation.mjs";
-
-const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
+export const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
+//import { userData as userToRegister } from "./utilities/validate-register.mjs";
 
 // End-points:
 // Register:  /api/v1/social/auth/register
 // Login: /api/v1/social/auth/login
+// Post Feed:
+// Post ID:
 
 // --------------- Registers User
-
 /**
  * API call that registers the user
  * @param {string} url
@@ -29,21 +29,22 @@ export async function registerUser(url, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url, postData);
-        // console.log(response);
+        console.log(response);
         const json = await response.json();
-        //console.log(json);
+      console.log(json);
     } catch (error) {
         console.log(error);
     }
 }
 
-const userToRegister = {
-    "name": "test_example",
-    "email": "test_example@noroff.no",
-    "password": "text_example123",
-    // "avatar": "https://img.service.com/avatar.jpg",
-    // "banner": "https://img.service.com/banner.jpg"
-};
+
+userToRegister = {
+"name": validUserName,
+"email": validEmail,
+"password": validPassword,
+"avatar": "https://img.service.com/avatar.jpg",
+"banner": "https://img.service.com/banner.jpg"
+}
 
 
 // registerUser(registerUrl, userToRegister);
